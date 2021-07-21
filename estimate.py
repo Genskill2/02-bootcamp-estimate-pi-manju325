@@ -5,7 +5,7 @@ import random
 def wallis(n):
  value=1
  t=1
- for t in range(1,n):
+ for t in range(1,n+1):
   value = value*(4*t**2)/((4*t**2)-1)
   t=+1
  return(2*value)
@@ -22,8 +22,8 @@ def monte_carlo(z):
    circle=+1
   else:
    square=+1
- pi=4*(circle/z)
- return pi  
+ r=4*(circle/z)
+ return r  
 
 class TestWallis(unittest.TestCase):
     def test_low_iters(self):
